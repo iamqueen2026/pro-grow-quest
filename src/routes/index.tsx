@@ -338,7 +338,7 @@ function Index() {
         </div>
       </section>
 
-      <PaymentSection />
+      <PaymentSection user={user} onRequestAuth={() => setAuthOpen(true)} />
 
       {/* Footer */}
       <footer className="border-t border-border bg-background py-14">

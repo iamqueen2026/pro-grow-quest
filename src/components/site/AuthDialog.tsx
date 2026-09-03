@@ -79,6 +79,10 @@ export function AuthDialog({
               placeholder="••••••••"
               required
             />
+            <p className="text-xs text-muted-foreground">
+              Use a strong password: at least 8 characters with a mix of uppercase, lowercase,
+              numbers, and symbols. Never reuse a password from another site.
+            </p>
           </div>
           {error ? <p className="text-sm text-destructive">{error}</p> : null}
           <Button type="submit" variant="hero" size="lg" className="w-full">
