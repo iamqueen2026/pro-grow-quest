@@ -32,7 +32,7 @@ export function AuthDialog({
     e.preventDefault();
     const parsed = schema.safeParse({ email, password });
     if (!parsed.success) {
-      setError(parsed.error.issues[0].message);
+      setError(parsed.error.issues[0]?.message ?? "Invalid input");
       return;
     }
     setError(null);

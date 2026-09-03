@@ -63,7 +63,7 @@ export function PaymentSection() {
     e.preventDefault();
     const parsed = schema.safeParse(form);
     if (!parsed.success) {
-      setError(parsed.error.issues[0].message);
+      setError(parsed.error.issues[0]?.message ?? "Invalid input");
       return;
     }
     setError(null);
