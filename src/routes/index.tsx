@@ -114,6 +114,14 @@ const TESTIMONIALS = [
   },
 ];
 
+const PARTNERS = [
+  { name: "Lovable.dev", role: "AI-powered development partner" },
+  { name: "Stripe", role: "Secure payment infrastructure" },
+  { name: "Supabase", role: "Managed database & auth" },
+  { name: "Twilio", role: "SMS & call routing" },
+  { name: "Google", role: "Local search & ads" },
+];
+
 function Index() {
   const [authOpen, setAuthOpen] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
