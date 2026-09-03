@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
 
 const CYCLE_MS = 2 * 24 * 60 * 60 * 1000; // perpetual 2-day cycle
+const KEY = "hs_offer_deadline";
 
 function remaining() {
-  return CYCLE_MS - (Date.now() % CYCLE_MS);
+  const now = Date.now();
+  let deadline = Number(localStorage.getItem(KEY));
+  if (!deadline || Number.isNaN(deadline) || deadline <= now) {
+    // Auto-reset: a fresh 2-day window starts the moment the timer hits zero.
+    deadline = now + CYCLE_MS;
+    localStorage.setItem(KEY, String(deadline));
+  }
+  return deadline - now;
 }
+
 
 function parts(ms: number) {
   const total = Math.max(0, Math.floor(ms / 1000));
