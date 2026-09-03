@@ -208,6 +208,7 @@ export function PaymentSection({
             </form>
           </div>
         </div>
+        )}
       </div>
 
       <Dialog open={success} onOpenChange={setSuccess}>
