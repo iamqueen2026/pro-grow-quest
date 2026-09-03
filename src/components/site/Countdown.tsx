@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-const CYCLE_MS = 2 * 24 * 60 * 60 * 1000; // perpetual 2-day cycle
-const KEY = "hs_offer_deadline";
+const CYCLE_MS = 3 * 60 * 60 * 1000; // perpetual 3-hour cycle
+const KEY = "hs_offer_deadline_v2";
 
 function remaining() {
   const now = Date.now();
