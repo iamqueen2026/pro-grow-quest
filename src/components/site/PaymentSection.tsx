@@ -100,10 +100,29 @@ export function PaymentSection({
           </h2>
           <p className="mt-3 text-muted-foreground">
             Transfer <strong className="text-foreground">$299</strong> directly to our US ACH bank
-            details below, then submit your details to confirm. No card required.
+            account, then submit your details to confirm. No card required.
           </p>
         </div>
 
+        {!revealed ? (
+          <div className="surface-card mx-auto mt-12 max-w-2xl rounded-2xl p-10 text-center">
+            <span className="mx-auto grid size-14 place-items-center rounded-full bg-primary/15 text-primary">
+              <Lock className="size-6" />
+            </span>
+            <h3 className="mt-5 font-display text-2xl font-bold">Ready to Book Your Service?</h3>
+            <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground">
+              {user
+                ? "Your account is verified. Click below to securely view the US ACH payment details."
+                : "For your security, payment details are shown only to registered users. Create your free account in seconds — no OTP, no email verification."}
+            </p>
+            <Button variant="cta" size="xl" className="mt-7" onClick={reveal}>
+              <UserCheck /> {user ? "Book Your Service — View Payment Details" : "Create Free Account to Book"}
+            </Button>
+            <p className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+              <ShieldCheck className="size-4 text-success" /> Instant access. No card required to sign up.
+            </p>
+          </div>
+        ) : (
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
           <div className="surface-card rounded-2xl p-6 sm:p-8">
             <div className="flex items-center gap-3">
