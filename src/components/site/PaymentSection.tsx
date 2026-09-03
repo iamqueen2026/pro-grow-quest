@@ -158,7 +158,7 @@ export function PaymentSection() {
                   maxLength={120}
                   value={form.reference}
                   onChange={(e) => setForm({ ...form, reference: e.target.value })}
-                  placeholder="ACH #　or note"
+                  placeholder="ACH reference or note"
                 />
               </div>
               {error ? <p className="text-sm text-destructive">{error}</p> : null}
