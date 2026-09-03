@@ -55,10 +55,26 @@ function CopyRow({ label, value }: { label: string; value: string }) {
   );
 }
 
-export function PaymentSection() {
+export function PaymentSection({
+  user,
+  onRequestAuth,
+}: {
+  user: AuthUser | null;
+  onRequestAuth: () => void;
+}) {
   const [form, setForm] = useState({ fullName: "", email: "", phone: "+1 ", reference: "" });
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
+  const [revealed, setRevealed] = useState(false);
+
+  const reveal = () => {
+    if (!user) {
+      toast.info("Create your free account first to unlock the payment details.");
+      onRequestAuth();
+      return;
+    }
+    setRevealed(true);
+  };
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
