@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "HomeScale | Growth Systems for US Home Services Businesses" },
+      { title: "LEAD BOOST WUAZE | Websites & Growth Solutions for Local Businesses" },
       {
         name: "description",
         content:
