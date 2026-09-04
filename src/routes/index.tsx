@@ -415,10 +415,19 @@ function Index() {
             {PARTNERS.map((p) => (
               <div
                 key={p.name}
-                className="glitch surface-card group flex flex-col items-center gap-2 rounded-xl px-4 py-6 text-center"
+                className="glitch surface-card group relative flex flex-col items-center gap-2 rounded-xl px-4 py-6 text-center transition-transform duration-300 hover:-translate-y-1"
               >
-                <span className="grid size-12 place-items-center rounded-xl bg-primary/15 text-primary transition-colors group-hover:bg-primary/25">
-                  <p.icon className="size-6" />
+                {p.official && (
+                  <span className="absolute -top-2.5 rounded-full bg-[image:var(--gradient-primary)] px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest text-primary-foreground shadow-lg">
+                    Official Partner
+                  </span>
+                )}
+                <span
+                  className="grid size-12 place-items-center rounded-xl font-display text-xl font-bold shadow-md transition-transform duration-300 group-hover:scale-110"
+                  style={{ backgroundColor: p.bg, color: p.fg }}
+                  aria-hidden="true"
+                >
+                  {p.mark}
                 </span>
                 <span className="font-display text-base font-bold tracking-tight">{p.name}</span>
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-accent">
