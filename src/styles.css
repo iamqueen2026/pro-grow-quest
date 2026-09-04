@@ -126,6 +126,20 @@
   box-shadow: var(--shadow-elegant);
 }
 
+@utility video-veil {
+  background:
+    radial-gradient(
+      110% 80% at 75% 0%,
+      color-mix(in oklab, var(--primary) 28%, transparent),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--background) 78%, transparent),
+      color-mix(in oklab, var(--background) 94%, transparent)
+    );
+}
+
 /* Subtle tech "glitch" hover effect */
 @utility glitch {
   position: relative;

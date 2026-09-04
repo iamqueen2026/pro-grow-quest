@@ -23,6 +23,7 @@ import { Countdown } from "@/components/site/Countdown";
 import { AuthDialog, type AuthUser } from "@/components/site/AuthDialog";
 import { PaymentSection } from "@/components/site/PaymentSection";
 import heroImage from "@/assets/hero-pro.jpg";
+import heroVideo from "@/assets/hero-loop.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -190,8 +191,19 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="hero-surface border-b border-border py-16 sm:py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-2">
+      <section id="top" className="hero-surface relative overflow-hidden border-b border-border py-16 sm:py-24">
+        <video
+          className="pointer-events-none absolute inset-0 size-full object-cover opacity-25"
+          src={heroVideo.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        />
+        <div className="video-veil pointer-events-none absolute inset-0" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-2">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
               <Sparkles className="size-3.5 text-accent" /> Built for US Home Services Owners
@@ -341,6 +353,26 @@ function Index() {
                   <p className="text-xs text-muted-foreground">{t.role}</p>
                 </figcaption>
               </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="border-b border-border py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+            In partnership with
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {PARTNERS.map((p) => (
+              <div
+                key={p.name}
+                className="glitch surface-card flex flex-col items-center gap-1 rounded-xl px-4 py-5 text-center"
+              >
+                <span className="font-display text-base font-bold tracking-tight">{p.name}</span>
+                <span className="text-[11px] leading-snug text-muted-foreground">{p.role}</span>
+              </div>
             ))}
           </div>
         </div>
