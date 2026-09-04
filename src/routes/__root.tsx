@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Audit, local SEO, and lead funnels for plumbing, roofing, cleaning, landscaping and HVAC companies across the US.",
       },
-      { property: "og:title", content: "HomeScale | US Home Services Growth Systems" },
+      { property: "og:title", content: "LEAD BOOST WUAZE | Websites & Growth Solutions for Local Businesses" },
       {
         property: "og:description",
         content:
