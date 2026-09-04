@@ -117,36 +117,47 @@ const TESTIMONIALS = [
 
 const PARTNERS = [
   {
-    name: "Lovable.dev",
-    icon: Sparkles,
-    role: "AI-powered development partner",
+    name: "Lovable",
+    mark: "L",
+    bg: "#ff5c38",
+    fg: "#ffffff",
+    official: true,
+    role: "Official Partner — AI development",
     detail:
-      "Builds and hosts the high-converting websites and booking funnels we install for your business.",
+      "Our official platform partner. Builds and hosts the high-converting websites and booking funnels we install for your business.",
   },
   {
     name: "Stripe",
-    icon: Lock,
+    mark: "S",
+    bg: "#635bff",
+    fg: "#ffffff",
     role: "Secure payment infrastructure",
     detail:
       "Bank-grade, PCI-compliant payment processing so your customers can pay online with confidence.",
   },
   {
     name: "Supabase",
-    icon: BadgeCheck,
+    mark: "⚡",
+    bg: "#3ecf8e",
+    fg: "#0b1f17",
     role: "Managed database & auth",
     detail:
       "Encrypted customer data, lead records, and secure account access — always available, always backed up.",
   },
   {
     name: "Twilio",
-    icon: LifeBuoy,
+    mark: "T",
+    bg: "#f22f46",
+    fg: "#ffffff",
     role: "SMS & call routing",
     detail:
       "Powers instant text-back, missed-call follow-up, and tracked call routing so no lead ever goes cold.",
   },
   {
     name: "Google",
-    icon: Search,
+    mark: "G",
+    bg: "#4285f4",
+    fg: "#ffffff",
     role: "Local search & ads",
     detail:
       "Google Business Profile, Maps, and Ads expertise that puts you at the top of local search results.",
@@ -404,10 +415,19 @@ function Index() {
             {PARTNERS.map((p) => (
               <div
                 key={p.name}
-                className="glitch surface-card group flex flex-col items-center gap-2 rounded-xl px-4 py-6 text-center"
+                className="glitch surface-card group relative flex flex-col items-center gap-2 rounded-xl px-4 py-6 text-center transition-transform duration-300 hover:-translate-y-1"
               >
-                <span className="grid size-12 place-items-center rounded-xl bg-primary/15 text-primary transition-colors group-hover:bg-primary/25">
-                  <p.icon className="size-6" />
+                {p.official && (
+                  <span className="absolute -top-2.5 rounded-full bg-[image:var(--gradient-primary)] px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest text-primary-foreground shadow-lg">
+                    Official Partner
+                  </span>
+                )}
+                <span
+                  className="grid size-12 place-items-center rounded-xl font-display text-xl font-bold shadow-md transition-transform duration-300 group-hover:scale-110"
+                  style={{ backgroundColor: p.bg, color: p.fg }}
+                  aria-hidden="true"
+                >
+                  {p.mark}
                 </span>
                 <span className="font-display text-base font-bold tracking-tight">{p.name}</span>
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-accent">
