@@ -28,17 +28,17 @@ import heroVideo from "@/assets/hero-loop.mp4.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Scale Your Home Services Business to 6-Figures | Growth System" },
+      { title: "LEAD BOOST WUAZE | Websites & Growth Solutions for Local Businesses" },
       {
         name: "description",
         content:
           "US home services growth system for plumbing, roofing, cleaning, landscaping & HVAC. Audit, local SEO, and lead funnels. $1,499 value — $299 limited time.",
       },
-      { property: "og:title", content: "Scale Your Home Services Business to 6-Figures & Beyond" },
+      { property: "og:title", content: "LEAD BOOST WUAZE — Scale Your Home Services Business to 6-Figures & Beyond" },
       {
         property: "og:description",
         content:
-          "Diagnose why your plumbing, roofing, cleaning, landscaping or HVAC business isn't growing — and fix it. Limited time: $299 instead of $1,499.",
+          "Websites & Growth Solutions for Local Businesses. Limited time: $299 instead of $1,499.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -389,19 +389,31 @@ function Index() {
       </section>
 
       {/* Partners */}
-      <section className="border-b border-border py-16">
+      <section className="border-b border-border py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-            In partnership with
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold sm:text-4xl">
+              In Partnership With <span className="gradient-text">Industry Leaders</span>
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              We build your growth system on the same trusted platforms that power millions of US
+              businesses.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {PARTNERS.map((p) => (
               <div
                 key={p.name}
-                className="glitch surface-card flex flex-col items-center gap-1 rounded-xl px-4 py-5 text-center"
+                className="glitch surface-card group flex flex-col items-center gap-2 rounded-xl px-4 py-6 text-center"
               >
+                <span className="grid size-12 place-items-center rounded-xl bg-primary/15 text-primary transition-colors group-hover:bg-primary/25">
+                  <p.icon className="size-6" />
+                </span>
                 <span className="font-display text-base font-bold tracking-tight">{p.name}</span>
-                <span className="text-[11px] leading-snug text-muted-foreground">{p.role}</span>
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-accent">
+                  {p.role}
+                </span>
+                <span className="text-xs leading-snug text-muted-foreground">{p.detail}</span>
               </div>
             ))}
           </div>
