@@ -196,7 +196,7 @@ function Index() {
       <header className="border-b border-border">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <a href="#top" className="font-display text-lg font-bold tracking-tight">
-            Home<span className="gradient-text">Scale</span>
+            LEAD BOOST <span className="gradient-text">WUAZE</span>
           </a>
           <div className="flex items-center gap-2">
             {user ? (
@@ -428,10 +428,10 @@ function Index() {
           <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <p className="font-display text-lg font-bold">
-                Home<span className="gradient-text">Scale</span>
+                LEAD BOOST <span className="gradient-text">WUAZE</span>
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                Growth systems for US home services businesses.
+                Websites &amp; Growth Solutions for Local Businesses.
               </p>
             </div>
             <div className="space-y-2 text-sm text-muted-foreground">
