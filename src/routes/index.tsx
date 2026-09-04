@@ -23,6 +23,7 @@ import { Countdown } from "@/components/site/Countdown";
 import { AuthDialog, type AuthUser } from "@/components/site/AuthDialog";
 import { PaymentSection } from "@/components/site/PaymentSection";
 import heroImage from "@/assets/hero-pro.jpg";
+import heroVideo from "@/assets/hero-loop.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -190,8 +191,19 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="hero-surface border-b border-border py-16 sm:py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-2">
+      <section id="top" className="hero-surface relative overflow-hidden border-b border-border py-16 sm:py-24">
+        <video
+          className="pointer-events-none absolute inset-0 size-full object-cover opacity-25"
+          src={heroVideo.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        />
+        <div className="video-veil pointer-events-none absolute inset-0" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-2">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
               <Sparkles className="size-3.5 text-accent" /> Built for US Home Services Owners
