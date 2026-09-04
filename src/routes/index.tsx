@@ -358,6 +358,26 @@ function Index() {
         </div>
       </section>
 
+      {/* Partners */}
+      <section className="border-b border-border py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+            In partnership with
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {PARTNERS.map((p) => (
+              <div
+                key={p.name}
+                className="glitch surface-card flex flex-col items-center gap-1 rounded-xl px-4 py-5 text-center"
+              >
+                <span className="font-display text-base font-bold tracking-tight">{p.name}</span>
+                <span className="text-[11px] leading-snug text-muted-foreground">{p.role}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <PaymentSection user={user} onRequestAuth={() => setAuthOpen(true)} />
 
       {/* Footer */}
