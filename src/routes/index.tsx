@@ -116,11 +116,41 @@ const TESTIMONIALS = [
 ];
 
 const PARTNERS = [
-  { name: "Lovable.dev", role: "AI-powered development partner" },
-  { name: "Stripe", role: "Secure payment infrastructure" },
-  { name: "Supabase", role: "Managed database & auth" },
-  { name: "Twilio", role: "SMS & call routing" },
-  { name: "Google", role: "Local search & ads" },
+  {
+    name: "Lovable.dev",
+    icon: Sparkles,
+    role: "AI-powered development partner",
+    detail:
+      "Builds and hosts the high-converting websites and booking funnels we install for your business.",
+  },
+  {
+    name: "Stripe",
+    icon: Lock,
+    role: "Secure payment infrastructure",
+    detail:
+      "Bank-grade, PCI-compliant payment processing so your customers can pay online with confidence.",
+  },
+  {
+    name: "Supabase",
+    icon: BadgeCheck,
+    role: "Managed database & auth",
+    detail:
+      "Encrypted customer data, lead records, and secure account access — always available, always backed up.",
+  },
+  {
+    name: "Twilio",
+    icon: LifeBuoy,
+    role: "SMS & call routing",
+    detail:
+      "Powers instant text-back, missed-call follow-up, and tracked call routing so no lead ever goes cold.",
+  },
+  {
+    name: "Google",
+    icon: Search,
+    role: "Local search & ads",
+    detail:
+      "Google Business Profile, Maps, and Ads expertise that puts you at the top of local search results.",
+  },
 ];
 
 function Index() {
