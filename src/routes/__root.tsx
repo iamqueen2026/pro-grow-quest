@@ -78,13 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "HomeScale | Growth Systems for US Home Services Businesses" },
+      { title: "LEAD BOOST WUAZE | Websites & Growth Solutions for Local Businesses" },
       {
         name: "description",
         content:
           "Audit, local SEO, and lead funnels for plumbing, roofing, cleaning, landscaping and HVAC companies across the US.",
       },
-      { property: "og:title", content: "HomeScale | US Home Services Growth Systems" },
+      { property: "og:title", content: "LEAD BOOST WUAZE | Websites & Growth Solutions for Local Businesses" },
       {
         property: "og:description",
         content:

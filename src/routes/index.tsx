@@ -28,17 +28,17 @@ import heroVideo from "@/assets/hero-loop.mp4.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Scale Your Home Services Business to 6-Figures | Growth System" },
+      { title: "LEAD BOOST WUAZE | Websites & Growth Solutions for Local Businesses" },
       {
         name: "description",
         content:
           "US home services growth system for plumbing, roofing, cleaning, landscaping & HVAC. Audit, local SEO, and lead funnels. $1,499 value — $299 limited time.",
       },
-      { property: "og:title", content: "Scale Your Home Services Business to 6-Figures & Beyond" },
+      { property: "og:title", content: "LEAD BOOST WUAZE — Scale Your Home Services Business to 6-Figures & Beyond" },
       {
         property: "og:description",
         content:
-          "Diagnose why your plumbing, roofing, cleaning, landscaping or HVAC business isn't growing — and fix it. Limited time: $299 instead of $1,499.",
+          "Websites & Growth Solutions for Local Businesses. Limited time: $299 instead of $1,499.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -116,11 +116,41 @@ const TESTIMONIALS = [
 ];
 
 const PARTNERS = [
-  { name: "Lovable.dev", role: "AI-powered development partner" },
-  { name: "Stripe", role: "Secure payment infrastructure" },
-  { name: "Supabase", role: "Managed database & auth" },
-  { name: "Twilio", role: "SMS & call routing" },
-  { name: "Google", role: "Local search & ads" },
+  {
+    name: "Lovable.dev",
+    icon: Sparkles,
+    role: "AI-powered development partner",
+    detail:
+      "Builds and hosts the high-converting websites and booking funnels we install for your business.",
+  },
+  {
+    name: "Stripe",
+    icon: Lock,
+    role: "Secure payment infrastructure",
+    detail:
+      "Bank-grade, PCI-compliant payment processing so your customers can pay online with confidence.",
+  },
+  {
+    name: "Supabase",
+    icon: BadgeCheck,
+    role: "Managed database & auth",
+    detail:
+      "Encrypted customer data, lead records, and secure account access — always available, always backed up.",
+  },
+  {
+    name: "Twilio",
+    icon: LifeBuoy,
+    role: "SMS & call routing",
+    detail:
+      "Powers instant text-back, missed-call follow-up, and tracked call routing so no lead ever goes cold.",
+  },
+  {
+    name: "Google",
+    icon: Search,
+    role: "Local search & ads",
+    detail:
+      "Google Business Profile, Maps, and Ads expertise that puts you at the top of local search results.",
+  },
 ];
 
 function Index() {
@@ -166,7 +196,7 @@ function Index() {
       <header className="border-b border-border">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <a href="#top" className="font-display text-lg font-bold tracking-tight">
-            Home<span className="gradient-text">Scale</span>
+            LEAD BOOST <span className="gradient-text">WUAZE</span>
           </a>
           <div className="flex items-center gap-2">
             {user ? (
@@ -359,19 +389,31 @@ function Index() {
       </section>
 
       {/* Partners */}
-      <section className="border-b border-border py-16">
+      <section className="border-b border-border py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-            In partnership with
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold sm:text-4xl">
+              In Partnership With <span className="gradient-text">Industry Leaders</span>
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              We build your growth system on the same trusted platforms that power millions of US
+              businesses.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {PARTNERS.map((p) => (
               <div
                 key={p.name}
-                className="glitch surface-card flex flex-col items-center gap-1 rounded-xl px-4 py-5 text-center"
+                className="glitch surface-card group flex flex-col items-center gap-2 rounded-xl px-4 py-6 text-center"
               >
+                <span className="grid size-12 place-items-center rounded-xl bg-primary/15 text-primary transition-colors group-hover:bg-primary/25">
+                  <p.icon className="size-6" />
+                </span>
                 <span className="font-display text-base font-bold tracking-tight">{p.name}</span>
-                <span className="text-[11px] leading-snug text-muted-foreground">{p.role}</span>
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-accent">
+                  {p.role}
+                </span>
+                <span className="text-xs leading-snug text-muted-foreground">{p.detail}</span>
               </div>
             ))}
           </div>
@@ -386,10 +428,10 @@ function Index() {
           <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <p className="font-display text-lg font-bold">
-                Home<span className="gradient-text">Scale</span>
+                LEAD BOOST <span className="gradient-text">WUAZE</span>
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                Growth systems for US home services businesses.
+                Websites &amp; Growth Solutions for Local Businesses.
               </p>
             </div>
             <div className="space-y-2 text-sm text-muted-foreground">
@@ -411,8 +453,8 @@ function Index() {
             </div>
           </div>
           <p className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-            © {new Date().getFullYear()} HomeScale. All rights reserved. Results vary by market and
-            execution.
+            © {new Date().getFullYear()} LEAD BOOST WUAZE — Websites &amp; Growth Solutions for
+            Local Businesses. All rights reserved. Results vary by market and execution.
           </p>
         </div>
       </footer>
