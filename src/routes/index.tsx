@@ -453,8 +453,8 @@ function Index() {
             </div>
           </div>
           <p className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-            © {new Date().getFullYear()} HomeScale. All rights reserved. Results vary by market and
-            execution.
+            © {new Date().getFullYear()} LEAD BOOST WUAZE — Websites &amp; Growth Solutions for
+            Local Businesses. All rights reserved. Results vary by market and execution.
           </p>
         </div>
       </footer>
